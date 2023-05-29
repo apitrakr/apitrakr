@@ -2,14 +2,14 @@
 
 import ora from 'ora';
 import chalk from 'chalk';
-import { IInputArgs } from './models/inputArgs.js';
-import * as runner from './runners/runner.js';
-import { visualize } from './visualizers/visualizer.js';
+import { IInputArgs } from '@apitrakr/core/lib/models/inputArgs';
+import * as runner from '@apitrakr/core/lib/runners/runner';
+import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
-import { visualizeStats } from './visualizers/statsVisualizer.js';
-import { evaluateMathStats } from './helpers/mathHelper.js';
-import { ResponseData } from './models/responseData.js';
-import { CallbackType } from './models/callbackModel.js';
+import { visualizeStats } from './visualizers/statsVisualizer';
+import { evaluateMathStats } from '@apitrakr/core/lib/helpers/mathHelper';
+import { ResponseData } from '@apitrakr/core/lib/models/responseData';
+import { CallbackType } from '@apitrakr/core/lib/models/callbackModel';
 
 const program = new Command();
 

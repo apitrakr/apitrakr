@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "@apitrakr/core",
   "version": "0.1.0",
   "description": "The core library for APITrakr",
   "keywords": [
@@ -9,7 +9,6 @@
   "author": "dev-bre <hey@devbre.com>",
   "homepage": "https://apitrakr.com",
   "license": "AGPL-3.0",
-  "main": "lib/core.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
