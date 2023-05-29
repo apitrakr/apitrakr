@@ -1,5 +1,5 @@
 <div align="center">
-     <img src="https://github.com/apitrakr/apitrakr/assets/905984/968dd548-26ec-4e31-8423-f56a47229a7a" width=100 />
+     <img src="https://github.com/apitrakr/apitrakr/assets/905984/09047b1d-f10d-463a-ba50-214d16d42f5a" width=100 />
 </div>
 <div align="center">
     <h1 align="center">APITrakr</h1>
@@ -20,5 +20,5 @@
 <br/>
 
 
-# apitrakr
-The main repo for APITrakr, an API testing framework.
+# APITrakr
+The main repo for APITrakr, an Open Source API testing framework.
