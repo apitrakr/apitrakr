@@ -27,6 +27,7 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "start": "node lib/index.js",
     "test": "node ./__tests__/cli.test.js"
   },
   "bugs": {
