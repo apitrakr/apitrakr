@@ -1,9 +1,9 @@
-import { responseData } from "@apitrakr/core";
+import { SingleRunData } from "@apitrakr/core/src/models/responseData";
 import { visualizeChart } from "./chartVisualizer";
 import { visualizeTable } from "./tableVisualizer";
 import { visualizeText } from "./textVisualizer";
 
-export const visualize = (dataPoints: responseData.SingleRunData[], values: number[], type: string) => {
+export const visualize = (dataPoints: SingleRunData[], values: number[], type: string) => {
 
    
 

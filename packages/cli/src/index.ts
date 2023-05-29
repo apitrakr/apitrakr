@@ -5,7 +5,11 @@ import chalk from 'chalk';
 import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
 import { visualizeStats } from './visualizers/statsVisualizer';
-import { IInputArgs, mathHelper, responseData, callbackModel, runner } from '@apitrakr/core';
+import { evaluateMathStats } from '@apitrakr/core/src/helpers/mathHelper';
+import { IInputArgs } from '@apitrakr/core/src/models/inputArgs';
+import { CallbackType } from '@apitrakr/core/src/models/callbackModel';
+import { ResponseData } from '@apitrakr/core/src/models/responseData';
+import { executeRun } from '@apitrakr/core/src/runners/runner';
 
 const program = new Command();
 
@@ -47,7 +51,7 @@ program
             }
         ).start();
 
-        let results: responseData.ResponseData | null = await runner.executeRun(args, (type: callbackModel.CallbackType, resp?: string) => { });
+        let results: ResponseData | null = await executeRun(args, (type: CallbackType, resp?: string) => { });
 
         spinner.stop();
 
@@ -57,7 +61,7 @@ program
                 const values: number[] = results.dataPoints.map((x) => x.duration);
                 visualize(results.dataPoints, values, args.visual);
 
-                const stats = mathHelper.evaluateMathStats(values);
+                const stats = evaluateMathStats(values);
                 visualizeStats(stats, args);
             }
 

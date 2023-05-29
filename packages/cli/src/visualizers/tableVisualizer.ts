@@ -1,9 +1,9 @@
 import chalk from 'chalk';
 import { table } from 'table';
-import { responseData } from '@apitrakr/core';
+import { SingleRunData } from '@apitrakr/core/src/models/responseData';
 import { durationText, statusCodeText } from '../helpers/textHelper';
 
-export const visualizeTable = (values: number[], runData: responseData.SingleRunData[]) => {
+export const visualizeTable = (values: number[], runData: SingleRunData[]) => {
 
     const tableData: string[][] = [];
 

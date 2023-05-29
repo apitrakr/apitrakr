@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { IInputArgs } from "@apitrakr/core";
+import { IInputArgs } from "@apitrakr/core/src/models/inputArgs";
 
 export const visualizeStats = (stats: [number, number, number, number, number], args: IInputArgs) => {
     console.log(`✅ ${chalk.green(`${args.iterations} executions`)} complete on:`);
