@@ -23,16 +23,22 @@ console.log('\n');
 program
     .version(version)
     .description(`APITrakr CLI v${version}`)
-    .requiredOption("-u, --url <value>", "The URL of the request")
+    .option("-u, --url <value>", "The URL of the request")
     .option("-m, --method <value>", "The method of the request (GET, POST, HEAD, etc..)")
     .option("-s, --visualization <value>", "Shows a visualization related to the current execution run. table, chart, text")
     .option("-n, --iterations <value>", "The number of iterations")
-    .option("-p, --payload <value>", "The payload")
-    .option("-e, --headers <value>", "The headers")
-    .option("-x, --execution <value>", "The execution type. sequential or parallel")
+    .option("-p, --payload <value>", "The payload file path")
+    .option("-e, --headers <value>", "The headers file path")
+    .option("-x, --execution <value>", "The execution type (sequential or parallel)")
     .option("-t, --timeout <value>", "Max timeout in ms")
     .option("-h, --help", "Show help")
     .action(async (data) => {
+
+        if (data.help) {
+            program.outputHelp();
+            return;
+        }
+
         const args: IInputArgs = {
             url: data.url,
             method: data.method,
