@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dev:run-cli":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat -m GET -s chart -n 5 -t 2500 -x parallel",
+    "dev:run-cli-simple":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat",
     "publish": "lerna run tsc && lerna publish"
   }
 }
