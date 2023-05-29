@@ -1,10 +1,11 @@
 
-
+<div align="center">
+     <img src="https://github.com/apitrakr/apitrakr/assets/905984/968dd548-26ec-4e31-8423-f56a47229a7a" width=100 />
+</div>
 <div align="center">
     <h1 align="center">APITrakr</h1>
     <h5>API Testing Framework</h5>
-</div> 
-
+</div>
 <div align="center">
   <a href="https://apitrakr.com?ref=github">apitrakr.com</a>
 </div>
