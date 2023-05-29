@@ -6,22 +6,23 @@ import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
 import { visualizeStats } from './visualizers/statsVisualizer';
 import { evaluateMathStats } from '@apitrakr/core/src/helpers/mathHelper';
-import { IInputArgs } from '@apitrakr/core/src/models/inputArgs';
+import { IInputArgs } from '@apitrakr/core/src/models/inputArgs'; 
 import { CallbackType } from '@apitrakr/core/src/models/callbackModel';
 import { ResponseData } from '@apitrakr/core/src/models/responseData';
 import { executeRun } from '@apitrakr/core/src/runners/runner';
+import { version } from "../package.json";
 
 const program = new Command();
 
 console.log('\n');
 console.log("--------------------------------------------------------");
-console.log("-       APITrakr CLI - API testing made easy           -");
+console.log(`-    APITrakr CLI (v${version}) - API testing tool     -`);
 console.log("--------------------------------------------------------");
 console.log('\n');
 
 program
-    .version("1.0.0")
-    .description("APITrakr CLI")
+    .version(version)
+    .description(`APITrakr CLI v${version}`)
     .requiredOption("-u, --url <value>", "The URL of the request")
     .option("-m, --method <value>", "The method of the request (GET, POST, HEAD, etc..)")
     .option("-s, --visualization <value>", "Shows a visualization related to the current execution run. table, chart, text")

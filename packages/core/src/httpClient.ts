@@ -1,16 +1,17 @@
 import { HttpResponseData } from "./models/httpResponseData";
 import { IInputArgs } from "./models/inputArgs";
- 
+import { version } from "../package.json";
+
 
 export const executeHttpRequest = async (input: IInputArgs): Promise<HttpResponseData> => {
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), input.timeout);
-    const reqHeaders : Record<string, string> = {};
+    const reqHeaders: Record<string, string> = {};
 
     try {
 
-        reqHeaders["User-Agent"] = `apitrakr/1.0.0`;
+        reqHeaders["User-Agent"] = `apitrakr/${version}`;
         if (input.headers) {
             Object.entries(input.headers).forEach(([key, value]) => reqHeaders[key] = value);
         }
@@ -28,7 +29,7 @@ export const executeHttpRequest = async (input: IInputArgs): Promise<HttpRespons
             }
         );
 
-        const fetchResp = await fetch(req, { signal: controller.signal});
+        const fetchResp = await fetch(req, { signal: controller.signal });
 
         if (!fetchResp.ok) {
             throw new ResponseError('Bad fetch response', fetchResp);
@@ -38,12 +39,12 @@ export const executeHttpRequest = async (input: IInputArgs): Promise<HttpRespons
         return { status: fetchResp.status, statusText: fetchResp.statusText, response: returnDataTxt };
 
     } catch (err: any) {
-        
+
         if (err instanceof TypeError) {
             return { status: 500, statusText: "Internal Server Error", response: "" };
         }
 
-        return { status: err.response.status, statusText:err.response.statusText,  response: "" };
+        return { status: err.response.status, statusText: err.response.statusText, response: "" };
     } finally {
         clearTimeout(timeoutId);
     }
