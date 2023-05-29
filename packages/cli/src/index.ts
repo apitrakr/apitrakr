@@ -5,18 +5,18 @@ import chalk from 'chalk';
 import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
 import { visualizeStats } from './visualizers/statsVisualizer';
-import { evaluateMathStats } from '@apitrakr/core/src/helpers/mathHelper';
-import { IInputArgs } from '@apitrakr/core/src/models/inputArgs'; 
-import { CallbackType } from '@apitrakr/core/src/models/callbackModel';
-import { ResponseData } from '@apitrakr/core/src/models/responseData';
-import { executeRun } from '@apitrakr/core/src/runners/runner';
+import { evaluateMathStats } from '@apitrakr/core/dist/src/helpers/mathHelper';
+import { IInputArgs } from '@apitrakr/core/dist/src/models/inputArgs'; 
+import { CallbackType } from '@apitrakr/core/dist/src/models/callbackModel';
+import { ResponseData } from '@apitrakr/core/dist/src/models/responseData';
+import { executeRun } from '@apitrakr/core/dist/src/runners/runner';
 import { version } from "../package.json";
 
 const program = new Command();
 
 console.log('\n');
 console.log("--------------------------------------------------------");
-console.log(`-    APITrakr CLI (v${version}) - API testing tool     -`);
+console.log(`-       APITrakr CLI [${version}] - API testing tool        -`);
 console.log("--------------------------------------------------------");
 console.log('\n');
 

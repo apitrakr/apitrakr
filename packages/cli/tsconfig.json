@@ -5,6 +5,6 @@
       "resolveJsonModule": true
     },
     "include": [
-      "./src", "../core/src"
+      "./src"
     ]
    }
