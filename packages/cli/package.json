@@ -1,6 +1,6 @@
 {
   "name": "@apitrakr/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The CLI package for APITrakr",
   "keywords": [
     "api",
@@ -27,7 +27,7 @@
     "url": "https://github.com/apitrakr/apitrakr/issues"
   },
   "dependencies": {
-    "@apitrakr/core": "^0.1.0",
+    "@apitrakr/core": "^0.1.1",
     "asciichart": "^1.5.25",
     "chalk": "^4.1.2",
     "commander": "^10.0.1",
