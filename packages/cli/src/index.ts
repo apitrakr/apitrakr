@@ -5,11 +5,11 @@ import chalk from 'chalk';
 import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
 import { visualizeStats } from './visualizers/statsVisualizer';
-import { evaluateMathStats } from '@apitrakr/core/dist/src/helpers/mathHelper';
-import { IInputArgs } from '@apitrakr/core/dist/src/models/inputArgs'; 
-import { CallbackType } from '@apitrakr/core/dist/src/models/callbackModel';
-import { ResponseData } from '@apitrakr/core/dist/src/models/responseData';
-import { executeRun } from '@apitrakr/core/dist/src/runners/runner';
+import { evaluateMathStats } from '@apitrakr/core';
+import { IInputArgs } from '@apitrakr/core'; 
+import { CallbackType } from '@apitrakr/core';
+import { ResponseData } from '@apitrakr/core';
+import { runner } from '@apitrakr/core';
 import { version } from "../package.json";
 
 const program = new Command();
@@ -58,7 +58,7 @@ program
             }
         ).start();
 
-        let results: ResponseData | null = await executeRun(args, (type: CallbackType, resp?: string) => { });
+        let results: ResponseData | null = await runner.executeRun(args, (type: CallbackType, resp?: string) => { });
 
         spinner.stop();
 

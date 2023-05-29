@@ -2,6 +2,7 @@
   "name": "@apitrakr/core",
   "version": "0.1.3",
   "description": "The core library for APITrakr",
+  "main": "dist/src/index.js",
   "keywords": [
     "api",
     "testing"
@@ -10,11 +11,11 @@
   "homepage": "https://apitrakr.com",
   "license": "AGPL-3.0",
   "directories": {
-    "lib": "lib",
+    "lib": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
