@@ -24,13 +24,13 @@ program
     .version(version)
     .description(`APITrakr CLI v${version}`)
     .option("-u, --url <value>", "The URL of the request")
-    .option("-m, --method <value>", "The method of the request (GET, POST, HEAD, etc..)")
-    .option("-s, --visualization <value>", "Shows a visualization related to the current execution run. table, chart, text")
-    .option("-n, --iterations <value>", "The number of iterations")
+    .option("-m, --method <value>", "The method of the request (GET, POST, HEAD, etc..)", "GET")
+    .option("-s, --visualization <value>", "Shows a visualization related to the current execution run. table, chart, text", "chart")
+    .option("-n, --iterations <value>", "The number of iterations", "30")
     .option("-p, --payload <value>", "The payload file path")
     .option("-e, --headers <value>", "The headers file path")
-    .option("-x, --execution <value>", "The execution type (sequential or parallel)")
-    .option("-t, --timeout <value>", "Max timeout in ms")
+    .option("-x, --execution <value>", "The execution type (sequential or parallel)", "sequential")
+    .option("-t, --timeout <value>", "Max timeout in ms", "30000")
     .option("-h, --help", "Show help")
     .action(async (data) => {
 
