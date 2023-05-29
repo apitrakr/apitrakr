@@ -2,6 +2,7 @@
   "name": "@apitrakr/core",
   "version": "0.1.0",
   "description": "The core library for APITrakr",
+  "main": "lib/index.js",
   "keywords": [
     "api",
     "testing"

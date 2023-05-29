@@ -1,7 +1,7 @@
-import { IInputArgs } from "../models/inputArgs.js";
-import { ResponseData, SingleRunData } from "../models/responseData.js";
-import { executeHttpRequest } from "../httpClient.js";
-import { CallbackType } from "../models/callbackModel.js";
+import { IInputArgs } from "../models/inputArgs";
+import { ResponseData, SingleRunData } from "../models/responseData";
+import { executeHttpRequest } from "../httpClient";
+import { CallbackType } from "../models/callbackModel";
 
 export const runSequential = async (input: IInputArgs, callback: (type: CallbackType, responseData?: string) => void): Promise<ResponseData> => {
 

@@ -2,18 +2,12 @@
 
 import ora from 'ora';
 import chalk from 'chalk';
-import { IInputArgs } from '@apitrakr/core/lib/models/inputArgs';
-import * as runner from '@apitrakr/core/lib/runners/runner';
 import { visualize } from './visualizers/visualizer';
 import { Command } from 'commander';
 import { visualizeStats } from './visualizers/statsVisualizer';
-import { evaluateMathStats } from '@apitrakr/core/lib/helpers/mathHelper';
-import { ResponseData } from '@apitrakr/core/lib/models/responseData';
-import { CallbackType } from '@apitrakr/core/lib/models/callbackModel';
+import { IInputArgs, mathHelper, responseData, callbackModel, runner } from '@apitrakr/core';
 
 const program = new Command();
-
-// console.log(figlet.textSync("apitrakr"));
 
 console.log('\n');
 console.log("--------------------------------------------------------");
@@ -53,7 +47,7 @@ program
             }
         ).start();
 
-        let results : ResponseData | null  = await runner.executeRun(args, (type: CallbackType, resp?: string) => {});
+        let results: responseData.ResponseData | null = await runner.executeRun(args, (type: callbackModel.CallbackType, resp?: string) => { });
 
         spinner.stop();
 
@@ -63,7 +57,7 @@ program
                 const values: number[] = results.dataPoints.map((x) => x.duration);
                 visualize(results.dataPoints, values, args.visual);
 
-                const stats = evaluateMathStats(values);
+                const stats = mathHelper.evaluateMathStats(values);
                 visualizeStats(stats, args);
             }
 

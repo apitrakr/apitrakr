@@ -1,5 +1,5 @@
-import { HttpResponseData } from "./models/httpResponseData.js";
-import { IInputArgs } from "./models/inputArgs.js";
+import { HttpResponseData } from "./models/httpResponseData";
+import { IInputArgs } from "./models/inputArgs";
  
 
 export const executeHttpRequest = async (input: IInputArgs): Promise<HttpResponseData> => {

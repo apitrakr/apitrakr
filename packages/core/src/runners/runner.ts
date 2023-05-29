@@ -1,8 +1,8 @@
-import { ResponseData } from "../models/responseData.js";
-import * as sequentialRunner from "./sequential.js";
-import * as parallelRunner from "./parallel.js";
-import { IInputArgs } from "../models/inputArgs.js";
-import { CallbackType } from "../models/callbackModel.js";
+import { ResponseData } from "../models/responseData";
+import * as sequentialRunner from "./sequential";
+import * as parallelRunner from "./parallel";
+import { IInputArgs } from "../models/inputArgs";
+import { CallbackType } from "../models/callbackModel";
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { cwd } from "process";
