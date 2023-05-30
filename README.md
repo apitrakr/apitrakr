@@ -15,6 +15,14 @@
  <a href="https://www.npmjs.com/package/@apitrakr/cli" target="_blank">
       <img src="https://img.shields.io/npm/v/@apitrakr/cli?label=npm&style=flat" alt="get @apitrakr/cli on npm">
     </a>
+        <span align="center">
+ <a href="https://www.npmjs.com/package/@apitrakr/cli" target="_blank">
+      <img src="https://img.shields.io/badge/PR-welcome-brightgreen.svg?style=flat" alt="PR welcome on @apitrakr/cli">
+    </span>
+     </div>
+  
+     
+    
 </div>
 
 <br/>
