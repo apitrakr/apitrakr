@@ -53,7 +53,7 @@ npm run dev:run-cli-chart
 
 #### Example output
 
-https://github.com/apitrakr/apitrakr/assets/905984/5965f5d5-6583-418a-ba9a-33b8dc8a2c18
+<img src="https://github.com/apitrakr/apitrakr/assets/905984/5965f5d5-6583-418a-ba9a-33b8dc8a2c18" width=200 />
 
 
 ### Table output
@@ -64,7 +64,7 @@ npm run dev:run-cli-table
 
 #### Example output
 
-https://github.com/apitrakr/apitrakr/assets/905984/653a1557-a0d8-4c6c-b8eb-1be2747c1512
+<img src="https://github.com/apitrakr/apitrakr/assets/905984/653a1557-a0d8-4c6c-b8eb-1be2747c1512" width=200 />
 
 
 
