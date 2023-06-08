@@ -1,6 +1,6 @@
 {
   "name": "@apitrakr/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The core library for APITrakr",
   "main": "dist/src/index.js",
   "keywords": [
