@@ -12,12 +12,13 @@ export const executeHttpRequest = async (input: IInputArgs): Promise<HttpRespons
     try {
 
         reqHeaders["User-Agent"] = `apitrakr/${version}`;
+        
         if (input.headers) {
             Object.entries(input.headers).forEach(([key, value]) => reqHeaders[key] = value);
         }
 
-        if (input.payload) {
-            console.log(input.payload);
+        if (!canHaveBody(input.method) && input.payload) {
+            throw new Error(`Bad fetch request, the '${input.method}' method cannot have a request body.`);
         }
 
         const req = new Request(
@@ -40,6 +41,10 @@ export const executeHttpRequest = async (input: IInputArgs): Promise<HttpRespons
 
     } catch (err: any) {
 
+        if (err instanceof Error) {
+            return { status: 500, statusText: "Internal Server Error", response: err.message };
+        }
+
         if (err instanceof TypeError) {
             return { status: 500, statusText: "Internal Server Error", response: "" };
         }
@@ -49,6 +54,10 @@ export const executeHttpRequest = async (input: IInputArgs): Promise<HttpRespons
         clearTimeout(timeoutId);
     }
 };
+
+const canHaveBody = (method: string) => {
+    return (method !== "GET" && method !== "HEAD");
+}
 
 class ResponseError extends Error {
     response: Response;
