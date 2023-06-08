@@ -9,4 +9,5 @@ export interface SingleRunData {
     status: number;
     statusText: string;
     response?: string;
+    sizeKB: number;
 }

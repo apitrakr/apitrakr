@@ -10,8 +10,10 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "dev:run-cli":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat -m GET -s chart -n 5 -t 2500 -x parallel",
+    "dev:run-cli-chart":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat -m GET -s chart -n 5 -t 2500 -x parallel",
+    "dev:run-cli-table":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat -m GET -s table -n 5 -t 2500 -x parallel",
     "dev:run-cli-simple":"cd ./packages/cli && npm run start -- -u https://api.github.com/octocat",
-    "publish": "lerna run tsc && lerna publish"
+    "publish": "lerna run tsc && lerna publish",
+    "build": "lerna run tsc"
   }
 }
