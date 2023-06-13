@@ -5,10 +5,6 @@
     <h1 align="center">APITrakr</h1>
     <h5>API Testing Framework</h5>
 </div> 
-
-<div align="center">
-  <a href="https://apitrakr.com?ref=github">apitrakr.com</a>
-</div>
 <br/>
 
 <div align="center">
